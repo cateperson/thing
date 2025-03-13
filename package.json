@@ -3,6 +3,7 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
+	"homepage": "https://cateperson.github.io/thing/",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -11,7 +12,9 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint ."
+		"lint": "prettier --check . && eslint .",
+		"deploy": "gh-pages -d build"
+
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
@@ -33,7 +36,10 @@
 	},
 	"dependencies": {
 		"@supabase/supabase-js": "^2.49.1",
+		"@sveltejs/adapter-static": "^3.0.8",
 		"@tailwindcss/vite": "^4.0.12",
+		"gh-pages": "^6.3.0",
+		"install": "^0.13.0",
 		"svelte-multiselect": "^11.0.0-rc.1",
 		"tailwindcss": "^4.0.12"
 	}
